@@ -55,24 +55,10 @@ public class EWFlagConfig extends EConfig<EverWorldGuard> {
 				BlockTypes.CRAFTING_TABLE,
 				BlockTypes.ENCHANTING_TABLE,
 				BlockTypes.ANVIL,
-				BlockTypes.BLACK_SHULKER_BOX,
-				BlockTypes.BLUE_SHULKER_BOX,
-				BlockTypes.BROWN_SHULKER_BOX,
-				BlockTypes.CYAN_SHULKER_BOX,
-				BlockTypes.GRAY_SHULKER_BOX,
-				BlockTypes.GREEN_SHULKER_BOX,
-				BlockTypes.LIGHT_BLUE_SHULKER_BOX,
-				BlockTypes.LIME_SHULKER_BOX,
-				BlockTypes.MAGENTA_SHULKER_BOX,
-				BlockTypes.ORANGE_SHULKER_BOX,
-				BlockTypes.PINK_SHULKER_BOX,
-				BlockTypes.PURPLE_SHULKER_BOX,
-				BlockTypes.RED_SHULKER_BOX,
-				BlockTypes.SILVER_SHULKER_BOX,
-				BlockTypes.WHITE_SHULKER_BOX,
-				BlockTypes.YELLOW_SHULKER_BOX,
+				BlockTypes.JUKEBOX,
 				BlockTypes.BREWING_STAND,
-				BlockTypes.CAULDRON)
+				BlockTypes.CAULDRON,
+				BlockTypes.END_PORTAL)
 					.stream().map(block -> block.getId()).collect(Collectors.toList()));
 		
 		interact.put("GROUP_REDSTONE", Arrays.asList(
@@ -86,12 +72,12 @@ public class EWFlagConfig extends EConfig<EverWorldGuard> {
 				BlockTypes.LIGHT_WEIGHTED_PRESSURE_PLATE,
 				BlockTypes.DAYLIGHT_DETECTOR,
 				BlockTypes.DAYLIGHT_DETECTOR_INVERTED,
+				BlockTypes.HOPPER,
 				BlockTypes.POWERED_REPEATER,
 				BlockTypes.UNPOWERED_REPEATER,
 				BlockTypes.POWERED_COMPARATOR,
 				BlockTypes.UNPOWERED_COMPARATOR,
-				BlockTypes.NOTEBLOCK,
-				BlockTypes.DETECTOR_RAIL)
+				BlockTypes.NOTEBLOCK)
 					.stream().map(block -> block.getId()).collect(Collectors.toList()));
 		
 		interact.put("GROUP_DOOR", Arrays.asList(
@@ -110,17 +96,6 @@ public class EWFlagConfig extends EConfig<EverWorldGuard> {
 				BlockTypes.SPRUCE_FENCE_GATE,
 				BlockTypes.TRAPDOOR,
 				BlockTypes.IRON_TRAPDOOR)
-					.stream().map(block -> block.getId()).collect(Collectors.toList()));
-		
-		interact.put("TNT", Arrays.asList(
-				BlockTypes.TNT)
-					.stream().map(block -> block.getId()).collect(Collectors.toList()));
-		interact.put("GROUP_OTHERS", Arrays.asList(
-				BlockTypes.BED,
-				BlockTypes.END_PORTAL,
-				BlockTypes.BEACON,
-				BlockTypes.MOB_SPAWNER,
-				BlockTypes.JUKEBOX)
 					.stream().map(block -> block.getId()).collect(Collectors.toList()));
 		
 		addDefault("interact", interact);
